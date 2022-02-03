@@ -1,0 +1,23 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: cakephp-mysql-persistent
+  labels:
+    app: cakephp-mysql-persistent
+    template: cakephp-mysql-persistent
+  annotations:
+    description: Exposes and load balances the application pods
+    service.alpha.openshift.io/dependencies: '[{"name": "mysql", "kind": "Service"}]'
+spec:
+  ports:
+    - name: web
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  selector:
+    name: cakephp-mysql-persistent
+  type: ClusterIP
+  sessionAffinity: None
+  ipFamilies:
+    - IPv4
+  ipFamilyPolicy: SingleStack

@@ -1,0 +1,13 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: cakephp-mysql-persistent
+  labels:
+    app: cakephp-mysql-persistent
+    template: cakephp-mysql-persistent
+spec:
+  to:
+    kind: Service
+    name: cakephp-mysql-persistent
+    weight: 100
+  wildcardPolicy: None
