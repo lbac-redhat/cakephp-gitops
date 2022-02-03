@@ -32,7 +32,6 @@ spec:
           namespace: cakephp-gitops
           name: 'cakephp-mysql-persistent:latest'
     - type: ConfigChange
-  replicas: 3
   revisionHistoryLimit: 10
   test: false
   selector:
