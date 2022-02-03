@@ -53,7 +53,7 @@ spec:
                 - '-i'
                 - '-c'
                 - >-
-                  MYSQL_PWD='pWlPJC56d1fxs6JG' mysql -h 127.0.0.1 -u cakephp -D
+                  MYSQL_PWD='mKVlYd7WqXHh4XgE' mysql -h 127.0.0.1 -u cakephp -D
                   default -e 'SELECT 1'
             initialDelaySeconds: 5
             timeoutSeconds: 1
