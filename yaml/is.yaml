@@ -1,0 +1,10 @@
+kind: ImageStream
+apiVersion: image.openshift.io/v1
+metadata:
+  name: cakephp-mysql-persistent
+  labels:
+    app: cakephp-mysql-persistent
+    template: cakephp-mysql-persistent
+spec:
+  lookupPolicy:
+    local: false
